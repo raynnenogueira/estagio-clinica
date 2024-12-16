@@ -1,0 +1,252 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #0056b3;
+}
+
+section {
+    padding-top: 60px;
+    scroll-margin-top: 60px; 
+}
+
+
+/* Seção Principal */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem; 
+    margin: 0; 
+    z-index: 2; 
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px; 
+    z-index: 2; 
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero img {
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+
+/* Sobre Nós */
+.sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.sobre-nos h2,
+.sobre-nos h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sobre-nos p {
+    font-size: 16px;
+    max-width: 700px;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+/* Estilização da seção Equipe */
+.equipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.membro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+}
+
+.membro:hover {
+    transform: scale(1.05);
+}
+
+.membro img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.membro p {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Seção de Serviços */
+#services {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.service-card {
+    background: #f1f1f1;
+    padding: 20px;
+    margin: 15px;
+    display: inline-block;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    font-weight: bold;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+
+/* Formulário de Agendamento */
+#form-agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+form button:hover {
+    background-color: #45a049;
+}
+
+
+form input::placeholder,
+form select::placeholder {
+    color: #888;
+}
+
+.whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#mapa iframe {
+    width: 100%;
+    max-width: 500px; /* Define a largura máxima do iframe */
+    height: 300px; /* Define a altura do iframe */
+    border: 0;
+    object-fit: cover;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
