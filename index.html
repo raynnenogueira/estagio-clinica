@@ -23,10 +23,12 @@
 
     <!-- Seção Principal -->
     <section class="hero">
-        <h1>Bem-vindo à Clínica de Fisioterapia</h1>
-        <p>Saúde em movimento, reabilitação com cuidado</p>
-        <img src="images/banner.jpg" alt="Banner Clínica de Fisioterapia">
+        <div class="hero-content">
+            <h1>Bem-vindo à Clínica de Fisioterapia</h1>
+            <p>Saúde em movimento, reabilitação com cuidado</p>
+        </div>
     </section>
+
 
 
     <!-- Sobre Nós -->
@@ -63,22 +65,44 @@
         </div>
     </section>
 
+
+    <!-- Convênios e Parcerias -->
+    <section id="convenios" class="convenios">
+        <h2>Convênios e Parcerias</h2>
+        <div class="convenios-container">
+            <div class="convenio-item">
+                <img src="images/convenio-1.jpg" alt="Convênio Saúde XYZ">
+                <p>Convênio Saúde XYZ</p>
+            </div>
+            <div class="convenio-item">
+                <img src="images/convenio-1.jpg" alt="Convênio ABC">
+                <p>Convênio ABC</p>
+            </div>
+            <div class="convenio-item">
+                <img src="images/convenio-1.jpg" alt="Parceria com Plano Familiar 123">
+                <p>Parceria Plano Familiar 123</p>
+            </div>
+        </div>
+    </section>
+
+    
+
     <!-- Agendamento -->
     <section id="agendamento" class="agendamento">
-        <h2>Agendamento Online</h2>
+        <h2>Agende sua Consulta</h2>
         <form id="form-agendamento">
             <input type="text" placeholder="Nome" required>
             <input type="email" placeholder="E-mail" required>
             <input type="tel" placeholder="Telefone" required>
             <select required>
-                <option value="">Especialidade</option>
+                <option value="">Escolha a Especialidade</option>
                 <option value="ortopedica">Fisioterapia Ortopédica</option>
-                <option value="pós-cirurgica">Reabilitação Pós-Cirúrgica</option>
+                <option value="pos-cirurgica">Reabilitação Pós-Cirúrgica</option>
                 <option value="esportiva">Fisioterapia Esportiva</option>
-                <option value="esportiva">Tratamento de Dores Crônicas</option>
+                <option value="dores-cronicas">Tratamento de Dores Crônicas</option>
             </select>
             <input type="date" required>
-            <button type="submit">Enviar</button>
+            <button type="submit">Agendar</button>
         </form>
     </section>
 
@@ -94,6 +118,11 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.3106200944603!2d-39.31174002614613!3d-7.205359270733727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a1789af01e5769%3A0x394f7d5149e10af4!2sUNINASSAU%20-%20Juazeiro%20do%20Norte!5e0!3m2!1spt-BR!2sbr!4v1734356972726!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
+
+    <!-- Seção Principal -->
+    <section class="hero-banner">
+        <img src="images/banner-final.jpg" alt="Banner Clínica de Fisioterapia">
+    </section>
 
     <script src="script.js"></script>
 </body>

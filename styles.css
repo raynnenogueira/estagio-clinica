@@ -40,48 +40,46 @@ section {
 
 /* Seção Principal */
 .hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    background-image: url('images/banner-inicio.jpg'); /* Define a imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
     position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Garante que o texto fica acima do fundo */
+    color: #fff; /* Cor do texto em branco */
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 3rem; 
-    margin: 0; 
-    z-index: 2; 
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 1.5rem;
-    margin-top: 10px; 
-    z-index: 2; 
+    margin: 0;
 }
 
 .hero::before {
-    content: '';
+    content: ''; /* Overlay escuro */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 95%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Escurece a imagem */
+    z-index: 1; /* Fica atrás do texto */
 }
 
-.hero img {
-    max-width: 80%;
-    height: auto;
-    object-fit: cover;
-    margin-top: 20px;
-}
 
 
 /* Sobre Nós */
@@ -181,6 +179,60 @@ h2 {
 }
 
 
+
+/* Estilização de Convênios */
+#convenios {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+#convenios h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.convenios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.convenio-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.convenio-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.convenio-item p {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.convenio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 /* Formulário de Agendamento */
 #form-agendamento {
     display: flex;
@@ -249,4 +301,22 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+
+/* Seção Principal */
+.hero-banner {
+    height: auto; /* Ajusta a altura para o conteúdo */
+    padding: 0; /* Remove qualquer espaçamento interno */
+    margin: 0; /* Remove margens externas */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
