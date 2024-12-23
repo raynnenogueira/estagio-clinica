@@ -12,13 +12,23 @@ header {
     width: 100%;
     top: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 80px; /* Aumenta a altura do header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    height: 80px; /* Aumente a altura da imagem */
+    margin-right: 20px; /* Ajuste a margem à direita conforme necessário */
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 50px;
+    flex-grow: 1;
 }
 
 nav a {
@@ -26,10 +36,13 @@ nav a {
     color: #fff;
     font-weight: bold;
     transition: background 0.3s;
+    margin: 0 10px;
 }
 
 nav a:hover {
     background: #0056b3;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 section {
@@ -38,24 +51,24 @@ section {
 }
 
 
-/* Seção Principal */
+
 .hero {
     height: 100vh; /* Ocupa toda a altura da viewport */
-    background-image: url('images/banner-inicio.jpg'); /* Define a imagem de fundo */
-    background-size: cover; /* Garante que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição */
+    background-image: url('images/banner-inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center; /* Alinha o texto ao centro */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Garante que o texto fica acima do fundo */
-    color: #fff; /* Cor do texto em branco */
+    z-index: 2;
+    color: #fff;
     padding: 20px;
 }
 
@@ -70,14 +83,14 @@ section {
 }
 
 .hero::before {
-    content: ''; /* Overlay escuro */
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Escurece a imagem */
-    z-index: 1; /* Fica atrás do texto */
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 
@@ -106,43 +119,62 @@ section {
 }
 
 
+
+
+
 /* Estilização da seção Equipe */
+#equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; /* Espaçamento interno similar ao Sobre Nós */
+    background-color: #f9f9f9; /* Fundo claro como o Sobre Nós */
+    text-align: center;
+}
+
+#equipe h2 {
+    font-size: 2rem; /* Tamanho consistente com Sobre Nós */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
 .equipe {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding: 15px;
+    gap: 30px; /* Espaço entre os membros */
+    flex-wrap: wrap; /* Permite quebrar em várias linhas em telas menores */
 }
 
 .membro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    max-width: 250px;
-}
-
-.membro:hover {
-    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    max-width: 250px; /* Largura máxima para os cartões */
+    text-align: center;
 }
 
 .membro img {
     width: 120px;
     height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+    border-radius: 50%; /* Deixa a imagem circular */
     margin-bottom: 10px;
 }
 
 .membro p {
+    font-size: 1rem; /* Tamanho do texto */
     font-weight: bold;
-    font-size: 16px;
-    color: #333;
+    color: #555;
+    line-height: 1.4; /* Melhor leitura para textos maiores */
 }
+
 
 
 /* Seção de Serviços */
@@ -279,6 +311,17 @@ form select::placeholder {
     color: #888;
 }
 
+
+/* Ajustes para o h2 na seção de agendamento em dispositivos móveis */
+@media (max-width: 767px) {
+    #agendamento h2 {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte do título para caber melhor */
+        text-align: center; /* Garante que o título fique centralizado */
+        margin-bottom: 15px; /* Ajuste de margem para dar espaçamento */
+    }
+}
+
+
 .whatsapp {
     display: inline-block;
     background: #25d366;
@@ -306,7 +349,9 @@ footer {
 
 /* Seção Principal */
 .hero-banner {
-    height: auto; /* Ajusta a altura para o conteúdo */
+    width: 100%; /* A imagem ocupará 100% da largura disponível */
+    height: auto; /* A altura será ajustada proporcionalmente */
+    object-fit: cover; 
     padding: 0; /* Remove qualquer espaçamento interno */
     margin: 0; /* Remove margens externas */
     background-size: cover;
@@ -320,3 +365,458 @@ footer {
     position: relative;
     overflow: hidden;
 }
+
+
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 80px; /* Aumenta a altura do header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    height: 80px; /* Aumenta a altura da logo */
+    margin-right: 20px; /* Ajuste a margem à direita conforme necessário */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background: #0056b3;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+section {
+    padding-top: 60px;
+    scroll-margin-top: 60px; 
+}
+
+.hero {
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    background-image: url('images/banner-inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Sobre Nós */
+.sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.sobre-nos h2,
+.sobre-nos h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sobre-nos p {
+    font-size: 16px;
+    max-width: 700px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Estilização da seção Equipe */
+#equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; /* Espaçamento interno similar ao Sobre Nós */
+    background-color: #f9f9f9; /* Fundo claro como o Sobre Nós */
+    text-align: center;
+}
+
+#equipe h2 {
+    font-size: 2rem; /* Tamanho consistente com Sobre Nós */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.equipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaço entre os membros */
+    flex-wrap: wrap; /* Permite quebrar em várias linhas em telas menores */
+}
+
+.membro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    max-width: 250px; /* Largura máxima para os cartões */
+    text-align: center;
+}
+
+.membro img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+    border-radius: 50%; /* Deixa a imagem circular */
+    margin-bottom: 10px;
+}
+
+.membro p {
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: bold;
+    color: #555;
+    line-height: 1.4; /* Melhor leitura para textos maiores */
+}
+
+/* Seção de Serviços */
+#services {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.service-card {
+    background: #f1f1f1;
+    padding: 20px;
+    margin: 15px;
+    display: inline-block;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    font-weight: bold;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Estilização de Convênios */
+#convenios {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+#convenios h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.convenios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.convenio-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.convenio-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.convenio-item p {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.convenio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário de Agendamento */
+#form-agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+form input::placeholder,
+form select::placeholder {
+    color: #888;
+}
+
+.whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#mapa iframe {
+    width: 100%;
+    max-width: 500px; /* Define a largura máxima do iframe */
+    height: 300px; /* Define a altura do iframe */
+    border: 0;
+    object-fit: cover;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 1024px) {
+    /* Ajusta o layout para telas pequenas a médias */
+    header {
+        padding: 0 10px;
+        height: 70px;
+    }
+
+    header .logo {
+        height: 70px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .service-card {
+        width: 220px;
+        margin: 10px;
+    }
+
+    .equipe {
+        gap: 20px;
+    }
+
+    .membro {
+        max-width: 220px;
+    }
+
+    #convenios .convenio-item {
+        width: 200px;
+    }
+
+    #form-agendamento {
+        max-width: 90%;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Reduz a largura dos elementos e ajusta o texto */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .equipe {
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    #form-agendamento {
+        padding: 10px;
+    }
+}
+
+/* Para telas muito pequenas */
+/* Estilos para desktop */
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    z-index: 10; /* Garantir que o menu fique acima de outros elementos */
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-nav a {
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        border-top: 1px solid #444;
+    }
+
+    .mobile-nav a:hover {
+        background-color: #575757;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+        z-index: 20; /* Garantir que o ícone de menu fique acima de outros elementos */
+        position: absolute;  /* Para posicionar o ícone */
+        right: 20px;  /* Ajusta a distância do ícone em relação à borda direita */
+        top: 20px;   /* Ajusta a distância do ícone em relação ao topo */
+    }
+}
+
+/* Exibe o menu dropdown quando o ícone for clicado */
+.mobile-nav.active {
+    display: flex;
+}
+

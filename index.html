@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica de Fisioterapia</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
 </head>
+
 <body>
 
-    <!-- Página Inicial -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="#sobre-nos">Sobre Nós</a>
-                <a href="#services">Nossos Serviços</a>
-                <a href="#agendamento">Agendamento</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
+    <header>
+        <img src="images/banner-final-.png" alt="Banner Clínica de Fisioterapia" class="logo">
+        <nav class="nav">
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#services">Nossos Serviços</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+        <nav class="mobile-nav">
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#services">Nossos Serviços</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
     
+
 
     <!-- Seção Principal -->
     <section class="hero">
@@ -29,14 +41,18 @@
         </div>
     </section>
 
-
-
     <!-- Sobre Nós -->
     <section id="sobre-nos" class="sobre-nos">
         <h2>Sobre Nós</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit ex perspiciatis minima soluta, incidunt cumque nam ullam consequuntur labore quisquam mollitia totam officiis error iusto architecto. Eligendi, aut culpa..</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit ex perspiciatis minima soluta, incidunt
+            cumque nam ullam consequuntur labore quisquam mollitia totam officiis error iusto architecto. Eligendi, aut
+            culpa..</p>
+    </section>
+
+
+    <section id="equipe">
+        <h2>Equipe</h2>
         <div class="equipe">
-            <h3>Equipe</h3>
             <div class="membro">
                 <img src="https://placehold.co/150x150" alt="Dr. Nome">
                 <p>Dr. Lorem Ipsum - Fisioterapeuta Esportivo</p>
@@ -47,6 +63,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Seção de Serviços -->
     <section id="services">
@@ -64,7 +81,6 @@
             <p><strong>Tratamento de Dores Crônicas</strong></p>
         </div>
     </section>
-
 
     <!-- Convênios e Parcerias -->
     <section id="convenios" class="convenios">
@@ -84,8 +100,6 @@
             </div>
         </div>
     </section>
-
-    
 
     <!-- Agendamento -->
     <section id="agendamento" class="agendamento">
@@ -113,9 +127,12 @@
         <p>Telefone: (99) 9999-9999</p>
         <p>Email: contato@fisioterapia.com</p>
         <a href="https://wa.me/999999999" class="whatsapp" target="_blank">WhatsApp</a>
-        </br> </br>
+        <br><br>
         <div id="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.3106200944603!2d-39.31174002614613!3d-7.205359270733727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a1789af01e5769%3A0x394f7d5149e10af4!2sUNINASSAU%20-%20Juazeiro%20do%20Norte!5e0!3m2!1spt-BR!2sbr!4v1734356972726!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.3106200944603!2d-39.31174002614613!3d-7.205359270733727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a1789af01e5769%3A0x394f7d5149e10af4!2sUNINASSAU%20-%20Juazeiro%20do%20Norte!5e0!3m2!1spt-BR!2sbr!4v1734356972726!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
 
@@ -124,6 +141,6 @@
         <img src="images/banner-final.jpg" alt="Banner Clínica de Fisioterapia">
     </section>
 
-    <script src="script.js"></script>
 </body>
+
 </html>

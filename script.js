@@ -8,3 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
         this.reset(); // Limpa os campos do formulário
     });
 });
+
+function toggleMenu() {
+    const menu = document.querySelector('.mobile-nav');
+    menu.classList.toggle('active');
+}
+
